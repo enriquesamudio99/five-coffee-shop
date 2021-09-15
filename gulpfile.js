@@ -14,7 +14,7 @@ function compileCSS(done) {
 }
 
 function dev() {
-    watch("src/scss/app.scss", compileCSS);
+    watch("src/scss/**/*.scss", compileCSS);
 }
 
 exports.compileCSS = compileCSS;
