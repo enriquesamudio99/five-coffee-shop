@@ -449,3 +449,14 @@ h3 {
 .bg-primary {
   background-color: #e8505b;
 }
+
+.header {
+  padding: 3.5rem 0;
+}
+
+.header-home {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.75) 100%), url(../img/header_inicio.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
