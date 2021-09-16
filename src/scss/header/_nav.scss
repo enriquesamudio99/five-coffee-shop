@@ -1,0 +1,46 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+    @include m.md { 
+        flex-direction: row;
+    } 
+
+    a {
+        color: v.$white;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        font-size: 1.125rem;
+        transition: color .2s ease-in-out;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include m.md { 
+            margin-right: 1rem;
+            margin-bottom: 0;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        @include m.lg { 
+            margin-right: 1.5rem;
+        }
+
+        &.active {
+            color: v.$secondary;
+        }
+
+        &:hover {
+            color: v.$secondary;
+        }
+    }
+}

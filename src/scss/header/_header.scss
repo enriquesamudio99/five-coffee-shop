@@ -2,9 +2,24 @@
 @use "base/mixins" as m;
 
 .header {
-    padding: v.$gutter 0;
-    
-        
+    padding: v.$gutter 0; 
+
+    @include m.md { 
+        min-height: 700px;
+    }
+}
+
+.header-content {
+    h1 {
+        color: v.$white;
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: v.$gutter;
+
+        @include m.md { 
+            margin-top: calc(v.$gutter * 2);
+        }
+    }
 }
 
 .header-home {

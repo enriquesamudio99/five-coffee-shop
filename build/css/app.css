@@ -447,11 +447,28 @@ h3 {
 }
 
 .bg-primary {
-  background-color: #e8505b;
+  background-color: #5e311e;
 }
 
 .header {
   padding: 3.5rem 0;
+}
+@media (min-width: 768px) {
+  .header {
+    min-height: 700px;
+  }
+}
+
+.header-content h1 {
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 3.5rem;
+}
+@media (min-width: 768px) {
+  .header-content h1 {
+    margin-top: 7rem;
+  }
 }
 
 .header-home {
@@ -459,4 +476,67 @@ h3 {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.navbar .logo {
+  width: 180px;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+  .navbar .logo {
+    margin-bottom: 0;
+  }
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .main-nav {
+    flex-direction: row;
+  }
+}
+.main-nav a {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  transition: color 0.2s ease-in-out;
+}
+.main-nav a:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .main-nav a {
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+  .main-nav a:last-child {
+    margin-right: 0;
+  }
+}
+@media (min-width: 992px) {
+  .main-nav a {
+    margin-right: 1.5rem;
+  }
+}
+.main-nav a.active {
+  color: #c39c63;
+}
+.main-nav a:hover {
+  color: #c39c63;
 }
