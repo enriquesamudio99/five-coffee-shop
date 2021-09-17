@@ -1,0 +1,48 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.icons {
+    padding: v.$gutter 0;
+}
+
+.icons-list {
+    @include m.grid(1, 1.5rem);
+
+    @include m.sm { 
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    @include m.lg { 
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    li {
+        img {
+            width: 160px;
+            margin: 0 auto;
+
+            @include m.md { 
+                width: 200px;
+            }
+
+            @include m.lg { 
+                width: 240px;
+            }
+        }
+
+        p {
+            margin-top: 1.5rem;
+            font-family: v.$tertiaryFont;
+            color: v.$primary;
+            font-size: 1.5rem;
+
+            @include m.md { 
+                font-size: 1.75rem;
+            }
+
+            @include m.lg { 
+                font-size: 2rem;
+            }
+        }
+    }
+}

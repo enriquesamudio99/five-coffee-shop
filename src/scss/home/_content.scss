@@ -10,4 +10,11 @@
         padding: 3.5rem;
         margin-top: -100px;
     }
+
+    @include m.lg { 
+        p {
+            width: 75%;
+            margin: 0 auto;
+        }
+    }
 }
