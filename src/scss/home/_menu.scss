@@ -1,0 +1,79 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.our-menu {
+    background-image: url(../img/menu_arriba.svg), url(../img/menu_abajo.svg), linear-gradient(to right, v.$primary, v.$primary);
+    background-repeat: no-repeat;
+    background-position: center top 3.5rem, center bottom 6%, center center;
+    background-size: 200%;
+    padding: calc(v.$gutter * 3) 0 calc(v.$gutter * 5);
+
+    @include m.md { 
+        background-size: 100%;
+    }
+
+    @include m.lg { 
+        background-position: center top 2rem, center bottom 8%, center center;
+        background-size: 800px, 800px, 100%;
+    }
+}
+
+.menu-grid {
+    @include m.grid(1,2.5rem);
+
+    @include m.md { 
+        grid-template-columns: repeat(2,1fr);
+        gap: 3.5rem;
+    }
+}
+
+.menu {
+    color: v.$white;
+
+    h3 {
+        font-size: 1.25rem;
+
+        @include m.md { 
+            font-size: 1.5rem;
+        }
+
+        @include m.lg { 
+            font-size: 1.75rem;
+        }
+    }
+
+    ul {
+        display: grid;
+        gap: 1.5rem;
+    }
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            color: v.$white;
+            margin-bottom: 0;
+
+            @include m.sm { 
+                font-size: 1.25rem;
+            }
+            span {
+                display: block;
+                color: v.$lightSecondary;
+            }
+
+        }
+
+        .price {
+            font-size: 1.5rem;
+            margin-left: 1.5rem;
+
+            @include m.lg { 
+                font-size: 2rem;
+            }
+            font-weight: 700;
+        }
+    }
+}
