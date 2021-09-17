@@ -1,0 +1,73 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.footer { 
+    background-color: v.$primary;
+
+    .copyright {
+        margin: 0;
+        padding: 2rem 0;
+        text-align: center;
+        color: v.$white;
+        font-family: v.$tertiaryFont;
+
+        @include m.md { 
+            font-size: 1.25rem;
+        }
+    }
+}
+
+.footer-content {
+    padding: v.$gutter 1.5rem;
+    background-color: v.$white;
+    @include m.grid(1,1.5rem);
+
+    @include m.sm { 
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    @include m.md { 
+        padding: v.$gutter;
+    }
+
+    @include m.lg { 
+        grid-template-columns: repeat(3,1fr);
+    }
+
+}
+
+.footer-box {
+    text-align: center;
+    font-family: v.$tertiaryFont;
+
+    h3 {
+        font-size: 1.25rem;
+        color: v.$secondary;
+
+        @include m.md { 
+            font-size: 1.5rem;
+        }
+
+        @include m.lg { 
+            font-size: 1.75rem;
+        }
+    }
+
+    p, a {
+        font-size: 1.125rem;
+        margin: 0 0 1rem 0;
+
+        &:last-child {
+            margin: 0;
+        }
+
+        @include m.sm { 
+            font-size: 1.25rem;
+        }
+    }
+
+    a {
+        color: v.$black;
+        text-decoration: underline;
+    }
+}

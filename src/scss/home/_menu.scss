@@ -6,14 +6,15 @@
     background-repeat: no-repeat;
     background-position: center top 3.5rem, center bottom 6%, center center;
     background-size: 200%;
-    padding: calc(v.$gutter * 3) 0 calc(v.$gutter * 5);
+    padding: calc(v.$gutter * 3) 0 calc(v.$gutter * 6);
 
     @include m.md { 
         background-size: 100%;
+        background-position: center top 2rem, center bottom 9%, center center;
     }
 
     @include m.lg { 
-        background-position: center top 2rem, center bottom 8%, center center;
+        background-position: center top 2rem, center bottom 11%, center center;
         background-size: 800px, 800px, 100%;
     }
 }
