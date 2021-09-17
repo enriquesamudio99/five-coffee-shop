@@ -349,6 +349,7 @@ html {
 }
 
 body {
+  background-color: #ebe7de;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
@@ -399,9 +400,11 @@ img {
 }
 
 h1, h2, h3 {
-  margin: 0 0 3.5rem 0;
+  margin: 0 0 1.75rem 0;
   line-height: 1.2;
   font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 h1 {
@@ -410,6 +413,29 @@ h1 {
 
 h2 {
   font-size: 2rem;
+  color: #5e311e;
+}
+h2 span {
+  font-size: 0.75rem;
+  display: block;
+  color: #c39c63;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  background-image: url(../img/cafe.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+@media (min-width: 768px) {
+  h2::after {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 h3 {
@@ -424,6 +450,9 @@ h3 {
   h2 {
     font-size: 2.5rem;
   }
+  h2 span {
+    font-size: 1rem;
+  }
 
   h3 {
     font-size: 2rem;
@@ -436,6 +465,10 @@ h3 {
 
   h2 {
     font-size: 3rem;
+  }
+  h2 span {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
   }
 
   h3 {
@@ -539,4 +572,16 @@ h3 {
 }
 .main-nav a:hover {
   color: #c39c63;
+}
+
+.main-content {
+  background-color: #ffffff;
+  margin-top: -30px;
+  padding: 2.5rem 1.5rem;
+}
+@media (min-width: 768px) {
+  .main-content {
+    padding: 3.5rem;
+    margin-top: -100px;
+  }
 }
