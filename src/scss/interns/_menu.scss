@@ -1,0 +1,33 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.menu-content {
+    @include m.grid(1,0);
+
+    @include m.lg { 
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+
+        .image {
+            width: 450px;
+            margin: 0 auto;
+        }
+    }
+
+    p {
+        width: 100%;
+        margin: 0 0 1rem 0;
+    }
+
+    .text {
+        text-align: center;
+
+        @include m.md { 
+            font-size: 1.125rem;
+        }
+
+        @include m.lg { 
+            text-align: left;
+        }
+    }
+}

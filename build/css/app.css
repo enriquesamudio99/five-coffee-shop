@@ -495,14 +495,6 @@ h3 {
     font-size: 2.5rem;
   }
 }
-.text-center {
-  text-align: center;
-}
-
-.bg-primary {
-  background-color: #5e311e;
-}
-
 .header {
   padding: 3.5rem 0;
   background-repeat: no-repeat;
@@ -537,6 +529,14 @@ h3 {
 
 .header-process {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.75) 100%), url(../img/header_proceso.jpg);
+}
+
+.header-menu {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.75) 100%), url(../img/header_menu.jpg);
+}
+
+.header-gallery {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.75) 100%), url(../img/header_galeria.jpg);
 }
 
 .navbar {
@@ -1022,4 +1022,49 @@ h3 {
   width: 50%;
   height: 4px;
   background-color: #815f27;
+}
+
+.menu-content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0;
+}
+@media (min-width: 992px) {
+  .menu-content {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .menu-content .image {
+    width: 450px;
+    margin: 0 auto;
+  }
+}
+.menu-content p {
+  width: 100%;
+  margin: 0 0 1rem 0;
+}
+.menu-content .text {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .menu-content .text {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 992px) {
+  .menu-content .text {
+    text-align: left;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-primary {
+  background-color: #5e311e;
+}
+
+.pb-0 {
+  padding-bottom: 0;
 }
