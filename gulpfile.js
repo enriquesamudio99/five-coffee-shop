@@ -5,6 +5,7 @@ const sass = require("gulp-sass")(require("sass"));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sourcemaps = require("gulp-sourcemaps");
+const cssnano = require("cssnano");
 
 // IMG
 const imagemin = require("gulp-imagemin");
@@ -17,7 +18,10 @@ function compileCSS(done) {
         .pipe( sass({
             outputStyle: "expanded"
         }) )
-        .pipe(postcss([autoprefixer()]))
+        .pipe(postcss([
+            autoprefixer(),
+            cssnano()
+        ]))
         .pipe(sourcemaps.write("."))
         .pipe( dest("build/css"));
     done();
